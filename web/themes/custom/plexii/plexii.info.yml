@@ -1,0 +1,29 @@
+name: plexii
+type: theme
+base theme: stable9
+description: A custom responsive theme for PLEXII built with tailwind
+package: yes
+core_version_requirement: ^10 || ^11
+screenshot: screenshot.png
+libraries:
+  - plexii/global
+regions:
+  topbar: "Topbar"
+  branding: "Branding"
+  commodity_bar: "Commodity Bar"
+  hero: "Hero"
+  page_header: "Page Header"
+  breadcrumb: "Breadcrumb"
+  preface: "Preface"
+  content: "Content"
+  content_bottom: "Content Bottom"
+  multimedia: "Multimedia"
+  marque: "Marque"
+  lib_partners: "Library and Partners"
+  footer_top: "Footer Top"
+  footer_info: "Footer Info"
+  footer_nav: "Footer Navigation"
+  footer_bottom: "Footer Bottom"
+  footer_social: "Footer Social"
+  page_top: "Page top"
+  page_bottom: "Page bottom"

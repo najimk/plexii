@@ -1,0 +1,8 @@
+# Schema for the configuration files of the plexii theme.
+plexii.settings:
+  type: theme_settings
+  label: 'plexii settings'
+  mapping:
+    example:
+      type: string
+      label: Example
