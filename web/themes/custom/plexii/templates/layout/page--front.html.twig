@@ -46,9 +46,11 @@
 
   <header id="header" class="region region-header site-header">
     {{ page.topbar }}
-    {{ page.branding }}
-    {{ page.header }}
-    {{ page.commodity_bar }}
+    <div class="header-sticky-wrapper">
+      {{ page.branding }}
+      {{ page.commodity_bar }}
+      <div class="menu-overlay" aria-hidden="true"></div>
+    </div>
   </header>
 
   <main id="main" class="region region-content overflow-x-hidden" role="main">
