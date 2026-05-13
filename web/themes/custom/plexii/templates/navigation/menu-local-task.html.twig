@@ -14,4 +14,7 @@
  * @see \Drupal\Core\Menu\MenuPreprocess::preprocessMenuLocalTask()
  */
 #}
-<li{{ attributes }}>{{ link }}</li>
+
+<li class="local-tasks__item{% if link['#active'] %} local-tasks__item--active{% endif %}">
+  {{ link }}
+</li>

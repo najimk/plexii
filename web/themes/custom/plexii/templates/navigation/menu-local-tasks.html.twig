@@ -13,9 +13,17 @@
 #}
 {% if primary %}
   <h2 class="visually-hidden">{{ 'Primary tabs'|t }}</h2>
-  <ul>{{ primary }}</ul>
+  <nav class="local-tasks article-inner" aria-label="{{ 'Primary tabs'|t }}">
+    <ul class="local-tasks__list">
+      {{ primary }}
+    </ul>
+  </nav>
 {% endif %}
 {% if secondary %}
   <h2 class="visually-hidden">{{ 'Secondary tabs'|t }}</h2>
-  <ul>{{ secondary }}</ul>
+  <nav class="local-tasks local-tasks--secondary" aria-label="{{ 'Secondary tabs'|t }}">
+    <ul class="local-tasks__list">
+      {{ secondary }}
+    </ul>
+  </nav>
 {% endif %}
