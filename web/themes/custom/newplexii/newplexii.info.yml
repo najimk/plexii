@@ -1,0 +1,32 @@
+name: NewPlexii
+type: theme
+description: "Custom standalone theme for the New Plexii website, built with tailwind"
+core_version_requirement: ^11
+version: 1.0.0
+base theme: false
+
+libraries:
+  - newplexii/global-styles
+  - newplexii/global-scripts
+  - newplexii/tailwind
+
+regions:
+  topbar: "Topbar"
+  branding: "Branding"
+  commodity_bar: "Commodity Bar"
+  hero: "Hero"
+  page_header: "Page Header"
+  breadcrumb: "Breadcrumb"
+  preface: "Preface"
+  content: "Content"
+  content_bottom: "Content Bottom"
+  multimedia: "Multimedia"
+  marque: "Marque"
+  lib_partners: "Library and Partners"
+  footer_top: "Footer Top"
+  footer_info: "Footer Info"
+  footer_nav: "Footer Navigation"
+  footer_bottom: "Footer Bottom"
+  footer_social: "Footer Social"
+  page_top: "Page top"
+  page_bottom: "Page bottom"

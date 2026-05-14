@@ -1,12 +1,13 @@
 name: plexii
 type: theme
-base theme: stable9
+"base theme": stable9
 description: A custom responsive theme for PLEXII built with tailwind
 package: yes
 core_version_requirement: ^10 || ^11
 screenshot: screenshot.png
 libraries:
   - plexii/global
+  - plexii/tailwind
 regions:
   topbar: "Topbar"
   branding: "Branding"

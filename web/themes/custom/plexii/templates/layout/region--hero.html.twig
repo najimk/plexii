@@ -13,7 +13,9 @@
  */
 #}
 {% if content %}
-  <section {{ attributes.addClass('news-carousel-section', 'p-4', 'lg:px-5', 'lg:py-6') }}>
+  <section class="news-carousel-section p-4 lg:px-5 lg:py-6">
+    <div class="news-carousel-inner">
     {{ content }}
+    </div>
   </section>
 {% endif %}

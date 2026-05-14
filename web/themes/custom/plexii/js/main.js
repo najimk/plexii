@@ -1,12 +1,10 @@
-/**
- * @file
- * plexii behaviors.
- */
 (function (Drupal) {
   "use strict";
 
   Drupal.behaviors.plexii = {
-    attach(context, settings) {
+    attach: function (context, settings) {
+      // Start your custom JS here
+
       // ── Mobile menu toggle ──────────────────────────────────
       var toggle = document.querySelector(".site-header .menu-toggle");
       var menu = document.getElementById("main-menu");
@@ -215,6 +213,8 @@
           if (activePanel) activePanel.hidden = false;
         });
       });
+
+      // End your custom JS here
     },
   };
 })(Drupal);

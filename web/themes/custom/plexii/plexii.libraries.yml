@@ -2,10 +2,8 @@
 global:
   js:
     js/main.js: {}
-    js/plexii.js: {}
   dependencies:
     - core/drupal
-    - core/once
   css:
     base:
       css/base/elements.css: {}
@@ -27,3 +25,8 @@ global:
     theme:
       css/styles.css: {}
       css/theme/print.css: { media: print }
+
+tailwind:
+  header_weight: -100
+  js:
+    https://cdn.tailwindcss.com: { type: external, minified: false }

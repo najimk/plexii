@@ -1,0 +1,15 @@
+global-styles:
+  css:
+    theme:
+      css/styles.css: {}
+
+global-scripts:
+  js:
+    js/main.js: {}
+  dependencies:
+    - core/drupal
+
+tailwind:
+  header_weight: -100
+  js:
+    https://cdn.tailwindcss.com: { type: external, minified: false }
