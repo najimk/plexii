@@ -1,0 +1,12 @@
+name: PDF Preview Image
+description: Autogenerates PDF preview into an image field.
+core_version_requirement: ^10 || ^11
+package: Field types
+type: module
+dependencies:
+  - drupal:image
+
+# Information added by Drupal.org packaging script on 2025-03-17
+version: '3.0.0'
+project: 'pdf_preview_image'
+datestamp: 1742239404

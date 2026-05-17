@@ -24,6 +24,7 @@
         "drupal/core-recommended": "^11.3",
         "drupal/ctools": "^4.1",
         "drupal/diff": "^1.10",
+        "drupal/download_file": "^2.0",
         "drupal/ds": "^3.37",
         "drupal/easy_breadcrumb": "^2.0",
         "drupal/entity_usage": "^2.0@beta",
@@ -34,7 +35,10 @@
         "drupal/metatag": "^2.2",
         "drupal/paragraphs": "^1.20",
         "drupal/pathauto": "^1.14",
+        "drupal/pdf_preview_image": "^3.0",
         "drupal/scheduler": "^2.2",
+        "drupal/semanticviews": "^3.1",
+        "drupal/webform": "^6.3@beta",
         "drush/drush": "^13.7"
     },
     "conflict": {

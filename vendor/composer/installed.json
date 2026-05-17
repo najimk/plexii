@@ -1917,6 +1917,78 @@
             "install-path": "../../web/modules/contrib/diff"
         },
         {
+            "name": "drupal/download_file",
+            "version": "2.0.0",
+            "version_normalized": "2.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/download_file.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/download_file-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "559e4a2a2cc5d754d74497459aa08e4d35238051"
+            },
+            "require": {
+                "drupal/core": "^10.0 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1727431005",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Ayesh Karunaratne (Ayesh)",
+                    "homepage": "https://www.drupal.org/u/ayesh",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Ben Mullins (bnjmnm)",
+                    "homepage": "https://www.drupal.org/u/bnjmnm",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Kristoffer Wiklund (kristofferwiklund)",
+                    "homepage": "https://www.drupal.org/u/kristofferwiklund",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Henrik Danielsson (TwoD)",
+                    "homepage": "https://www.drupal.org/u/twod",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Viktor Holovachek (AstonVictor)",
+                    "homepage": "https://www.drupal.org/u/astonvictor",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "DownloadFile is a module to direct download files or images.",
+            "homepage": "https://www.drupal.org/project/download_file",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/download_file",
+                "issues": "https://www.drupal.org/project/issues/download_file"
+            },
+            "install-path": "../../web/modules/contrib/download_file"
+        },
+        {
             "name": "drupal/ds",
             "version": "3.37.0",
             "version_normalized": "3.37.0.0",
@@ -2824,6 +2896,62 @@
             "install-path": "../../web/modules/contrib/pathauto"
         },
         {
+            "name": "drupal/pdf_preview_image",
+            "version": "3.0.0",
+            "version_normalized": "3.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/pdf_preview_image.git",
+                "reference": "3.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/pdf_preview_image-3.0.0.zip",
+                "reference": "3.0.0",
+                "shasum": "e85d421df942ea268bdf043d2879a3bc45dd6ec2"
+            },
+            "require": {
+                "drupal/core": "^10 || ^11",
+                "spatie/pdf-to-image": "^3.1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0",
+                    "datestamp": "1742239401",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "alex.tulbure",
+                    "homepage": "https://www.drupal.org/user/3550147"
+                },
+                {
+                    "name": "cameron prince",
+                    "homepage": "https://www.drupal.org/user/1765640"
+                },
+                {
+                    "name": "iuana",
+                    "homepage": "https://www.drupal.org/user/3543132"
+                }
+            ],
+            "description": "PDF Preview Image module provides an image preview from a pdf file and save it on a field image type.",
+            "homepage": "https://drupal.org/project/pdf_preview_image",
+            "support": {
+                "source": "https://git.drupalcode.org/project/pdf_preview_image"
+            },
+            "install-path": "../../web/modules/contrib/pdf_preview_image"
+        },
+        {
             "name": "drupal/scheduler",
             "version": "2.2.2",
             "version_normalized": "2.2.2.0",
@@ -2899,6 +3027,63 @@
                 "issues": "https://www.drupal.org/project/issues/scheduler"
             },
             "install-path": "../../web/modules/contrib/scheduler"
+        },
+        {
+            "name": "drupal/semanticviews",
+            "version": "3.1.0",
+            "version_normalized": "3.1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/semanticviews.git",
+                "reference": "3.1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/semanticviews-3.1.0.zip",
+                "reference": "3.1.0",
+                "shasum": "fb612cc9966a167d9e48aa62ae6541ec15a27cc9"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.1.0",
+                    "datestamp": "1721227862",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "jpamental",
+                    "homepage": "https://www.drupal.org/user/174960"
+                },
+                {
+                    "name": "nicxvan",
+                    "homepage": "https://www.drupal.org/user/531480"
+                },
+                {
+                    "name": "Scyther",
+                    "homepage": "https://www.drupal.org/user/613694"
+                }
+            ],
+            "description": "Views plugins for UI management of output markup.",
+            "homepage": "https://drupal.org/project/semanticviews",
+            "support": {
+                "source": "https://git.drupalcode.org/project/semanticviews",
+                "issues": "https://www.drupal.org/project/issues/semanticviews",
+                "docs": "https://www.drupal.org/docs/contributed-modules/semantic-views"
+            },
+            "install-path": "../../web/modules/contrib/semanticviews"
         },
         {
             "name": "drupal/sophron",
@@ -3027,6 +3212,116 @@
                 "source": "https://git.drupalcode.org/project/token"
             },
             "install-path": "../../web/modules/contrib/token"
+        },
+        {
+            "name": "drupal/webform",
+            "version": "6.3.0-beta9",
+            "version_normalized": "6.3.0.0-beta9",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/webform.git",
+                "reference": "6.3.0-beta9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/webform-6.3.0-beta9.zip",
+                "reference": "6.3.0-beta9",
+                "shasum": "90225ae8c025ac879e3b9c7c1f9378323a42e802"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11.0"
+            },
+            "require-dev": {
+                "drupal/address": "^2.0",
+                "drupal/captcha": "^2.0",
+                "drupal/chosen": "^4.0",
+                "drupal/clientside_validation": "^4.0",
+                "drupal/clientside_validation_jquery": "*",
+                "drupal/devel": "^5.0",
+                "drupal/entity": "^1.0",
+                "drupal/entity_print": "^2.0",
+                "drupal/hal": "^2.0",
+                "drupal/jquery_ui": "^1.0",
+                "drupal/jquery_ui_button": "^2.0",
+                "drupal/jquery_ui_checkboxradio": "^2.0",
+                "drupal/jquery_ui_datepicker": "^2.0",
+                "drupal/mailsystem": "^4.0",
+                "drupal/metatag": "^2.0",
+                "drupal/paragraphs": "^1.0",
+                "drupal/select2": "^1.0 || ^2.0",
+                "drupal/smtp": "^1.0",
+                "drupal/styleguide": "^2.0",
+                "drupal/telephone_validation": "^2.0",
+                "drupal/token": "^1.0",
+                "drupal/webform_access": "*",
+                "drupal/webform_attachment": "*",
+                "drupal/webform_clientside_validation": "*",
+                "drupal/webform_devel": "*",
+                "drupal/webform_entity_print": "*",
+                "drupal/webform_node": "*",
+                "drupal/webform_options_limit": "*",
+                "drupal/webform_scheduled_email": "*",
+                "drupal/webform_share": "*",
+                "drupal/webform_ui": "*"
+            },
+            "suggest": {
+                "drupal/jquery_ui_buttons": "Provides jQuery UI Checkboxradio library. Required by the Webform jQueryUI Buttons module. The Webform jQueryUI Buttons module is deprecated because jQueryUI is no longer maintained.",
+                "drupal/jquery_ui_datepicker": "Provides jQuery UI Datepicker library. Required to support datepickers. The Webform jQueryUI Datepicker module is deprecated because jQueryUI is no longer maintained."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "6.3.0-beta9",
+                    "datestamp": "1777906727",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": ">=11"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Jacob Rockowitz (jrockowitz)",
+                    "homepage": "https://www.drupal.org/u/jrockowitz",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "https://www.drupal.org/node/7404/committers",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "liam morland",
+                    "homepage": "https://www.drupal.org/user/493050"
+                },
+                {
+                    "name": "mandclu",
+                    "homepage": "https://www.drupal.org/user/52136"
+                },
+                {
+                    "name": "quicksketch",
+                    "homepage": "https://www.drupal.org/user/35821"
+                }
+            ],
+            "description": "Enables the creation of webforms and questionnaires.",
+            "homepage": "https://drupal.org/project/webform",
+            "support": {
+                "source": "https://git.drupalcode.org/project/webform",
+                "issues": "https://www.drupal.org/project/issues/webform?version=8.x",
+                "docs": "https://www.drupal.org/docs/8/modules/webform",
+                "forum": "https://drupal.stackexchange.com/questions/tagged/webform"
+            },
+            "install-path": "../../web/modules/contrib/webform"
         },
         {
             "name": "drush/drush",
@@ -5348,6 +5643,79 @@
                 }
             ],
             "install-path": "../sebastian/diff"
+        },
+        {
+            "name": "spatie/pdf-to-image",
+            "version": "3.2.0",
+            "version_normalized": "3.2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/pdf-to-image.git",
+                "reference": "eb46281e228a2b9723d12c13c365d90b28b99253"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/pdf-to-image/zipball/eb46281e228a2b9723d12c13c365d90b28b99253",
+                "reference": "eb46281e228a2b9723d12c13c365d90b28b99253",
+                "shasum": ""
+            },
+            "require": {
+                "ext-imagick": "*",
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "pestphp/pest": "^2.34|^3.0|^4.0"
+            },
+            "time": "2026-02-09T14:43:55+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\PdfToImage\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Patrick Organ",
+                    "email": "patrick@permafrost.dev",
+                    "homepage": "https://permafrost.dev",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Convert a pdf to an image",
+            "homepage": "https://github.com/spatie/pdf-to-image",
+            "keywords": [
+                "convert",
+                "image",
+                "pdf",
+                "pdf-to-image",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/pdf-to-image/issues",
+                "source": "https://github.com/spatie/pdf-to-image/tree/3.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "install-path": "../spatie/pdf-to-image"
         },
         {
             "name": "symfony/console",

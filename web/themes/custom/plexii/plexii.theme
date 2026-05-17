@@ -31,3 +31,21 @@ function plexii_preprocess_page(array &$variables): void {
 function plexii_preprocess_node(array &$variables): void {
 
 }
+
+/**
+ * page_alter_HOOK() to correct the theme suggestions 
+ * 
+ */
+function plexii_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+
+  if ($node instanceof \Drupal\node\NodeInterface) {
+    $suggestions[] = 'page__node__' . $node->bundle();
+  } elseif (is_numeric($node)) {
+    // Sometimes the route returns a node ID instead of an object
+    $node = \Drupal\node\Entity\Node::load($node);
+    if ($node) {
+      $suggestions[] = 'page__node__' . $node->bundle();
+    }
+  }
+}
