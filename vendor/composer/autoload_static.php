@@ -15,14 +15,14 @@ class ComposerStaticInit1c94884feafe7e7de67cff6263fe48f2
         '606a39d89246991a373564698c2d8383' => __DIR__ . '/..' . '/symfony/polyfill-php85/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
-        '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         '9d2b9fc6db0f153a0a149fefb182415e' => __DIR__ . '/..' . '/symfony/polyfill-php84/bootstrap.php',
+        '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '89efb1254ef2d1c5d80096acd12c4098' => __DIR__ . '/..' . '/twig/twig/src/Resources/core.php',
         'ffecb95d45175fd40f75be8a23b34f90' => __DIR__ . '/..' . '/twig/twig/src/Resources/debug.php',
         'c7baa00073ee9c61edf148c51917cfb4' => __DIR__ . '/..' . '/twig/twig/src/Resources/escaper.php',
         'f844ccf1d25df8663951193c3fc307c8' => __DIR__ . '/..' . '/twig/twig/src/Resources/string_loader.php',
-        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '662a729f963d39afe703c9d9b7ab4a8c' => __DIR__ . '/..' . '/symfony/polyfill-php83/bootstrap.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '2f69d3914119f042cca9e44442d5ce95' => __DIR__ . '/../..' . '/web/core/includes/bootstrap.inc',
@@ -105,11 +105,16 @@ class ComposerStaticInit1c94884feafe7e7de67cff6263fe48f2
         'M' =>
         array (
             'Masterminds\\' => 12,
+            'Mailchimp\\http\\' => 15,
+            'Mailchimp\\' => 10,
         ),
         'L' =>
         array (
             'League\\Container\\' => 17,
             'Laravel\\Prompts\\' => 16,
+            'Laminas\\Stdlib\\' => 15,
+            'Laminas\\Feed\\' => 13,
+            'Laminas\\Escaper\\' => 16,
         ),
         'G' =>
         array (
@@ -361,6 +366,14 @@ class ComposerStaticInit1c94884feafe7e7de67cff6263fe48f2
         array (
             0 => __DIR__ . '/..' . '/masterminds/html5/src',
         ),
+        'Mailchimp\\http\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/thinkshout/mailchimp-api-php/src/http',
+        ),
+        'Mailchimp\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/thinkshout/mailchimp-api-php/src',
+        ),
         'League\\Container\\' =>
         array (
             0 => __DIR__ . '/..' . '/league/container/src',
@@ -368,6 +381,18 @@ class ComposerStaticInit1c94884feafe7e7de67cff6263fe48f2
         'Laravel\\Prompts\\' =>
         array (
             0 => __DIR__ . '/..' . '/laravel/prompts/src',
+        ),
+        'Laminas\\Stdlib\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/laminas/laminas-stdlib/src',
+        ),
+        'Laminas\\Feed\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/laminas/laminas-feed/src',
+        ),
+        'Laminas\\Escaper\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/laminas/laminas-escaper/src',
         ),
         'GuzzleHttp\\Psr7\\' =>
         array (

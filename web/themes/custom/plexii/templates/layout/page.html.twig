@@ -55,7 +55,11 @@
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
     {{ page.hero }}
     {{ page.page_header }}
-    {{ page.content }}
+    <section class="site-section px-4 lg:px-5">
+      <div class="inner-wrap">
+        {{ page.content }}
+      </div>
+    </section>
     {{ page.content_bottom }}
     {{ page.marque }}
     {{ page.lib_partners }}

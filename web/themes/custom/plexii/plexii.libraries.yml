@@ -24,6 +24,7 @@ global:
       css/layout/layout.css: {}
     theme:
       css/styles.css: {}
+      css/prefix.css: {}
       css/theme/print.css: { media: print }
 
 tailwind:

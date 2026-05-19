@@ -49,3 +49,33 @@ function plexii_theme_suggestions_page_alter(array &$suggestions, array $variabl
     }
   }
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter() for Mailchimp signup form.
+ */
+function plexii_form_mailchimp_signup_subscribe_block_plexii_newsletter_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+  // --- Email field ---
+  if (isset($form['mergevars']['EMAIL'])) {
+    $form['mergevars']['EMAIL']['#attributes']['placeholder'] = (string) $form['mergevars']['EMAIL']['#title'];
+    $form['mergevars']['EMAIL']['#title_display'] = 'invisible';
+    $form['mergevars']['EMAIL']['#theme_wrappers'] = [];
+  }
+
+  // --- First Name field ---
+  if (isset($form['mergevars']['FNAME'])) {
+    $form['mergevars']['FNAME']['#attributes']['placeholder'] = (string) $form['mergevars']['FNAME']['#title'];
+    $form['mergevars']['FNAME']['#title_display'] = 'invisible';
+    $form['mergevars']['FNAME']['#theme_wrappers'] = [];
+  }
+
+  // --- Submit button ---
+  $form['actions']['submit']['#attributes']['class'][] = 'btn-subscribe';
+ 
+
+  // --- Remove wrapper from actions container too ---
+  $form['actions']['#theme_wrappers'] = [];
+
+  // --- Remove mergevars wrapper ---
+  $form['mergevars']['#theme_wrappers'] = [];
+}
