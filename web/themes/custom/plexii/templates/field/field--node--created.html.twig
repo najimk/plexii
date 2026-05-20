@@ -25,12 +25,8 @@
  * @todo Delete as part of https://www.drupal.org/node/3015623
  */
 #}
-{% if not is_inline %}
-  {% include "field.html.twig" %}
-{% else %}
-<span{{ attributes }}>
+<span{{ attributes.addClass('news-card-meta-item--date') }}>
   {%- for item in items -%}
     {{ item.content }}
   {%- endfor -%}
 </span>
-{% endif %}

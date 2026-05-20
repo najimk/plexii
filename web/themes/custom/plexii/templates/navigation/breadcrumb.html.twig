@@ -12,13 +12,14 @@
     <h2 id="system-breadcrumb" class="visually-hidden">{{ 'Breadcrumb'|t }}</h2>
    
     {% for item in breadcrumb %}
-      
-        {% if item.url %}
-          <a href="{{ item.url }}">{{ item.text }}</a>
-        {% else %}
-         <span class="breadcrumb-current"> {{ item.text }} </span>
-        {% endif %}
-      
+      {% if not loop.first %}
+        <span class="breadcrumb-separator" aria-hidden="true">&gt;</span>
+      {% endif %}
+      {% if item.url %}
+        <a href="{{ item.url }}">{{ item.text }}</a>
+      {% else %}
+        <span class="breadcrumb-current">{{ item.text }}</span>
+      {% endif %}
     {% endfor %}
   
   </nav>

@@ -60,7 +60,7 @@
           var topBottom = headerTop.getBoundingClientRect().bottom;
           if (topBottom <= 0) {
             if (!stickyWrapper.classList.contains("is-stuck")) {
-              spacer.style.height = stickyWrapper.offsetHeight + "px";
+              spacer.style.height = (window.innerWidth <= 768 ? 111 : stickyWrapper.offsetHeight) + "px";
               spacer.style.display = "block";
               stickyWrapper.classList.add("is-stuck");
             }
@@ -94,6 +94,7 @@
         clone.setAttribute("aria-hidden", "true");
         tickerContent.parentNode.appendChild(clone);
       }
+
 
       // ── News carousel ───────────────────────────────────────
       var carouselViewport = document.getElementById("news-carousel");

@@ -35,7 +35,11 @@
       <ul>
     {% endif %}
     {% for item in items %}
-      <li{{ item.attributes }}>
+      {% set li_classes = item.in_active_trail ? ['is-active'] : [] %}
+      {% if menu_level == 0 and loop.last %}
+        {% set li_classes = li_classes|merge(['menu-item-inquiry']) %}
+      {% endif %}
+      <li{{ item.attributes.addClass(li_classes) }}>
         {{ link(item.title, item.url) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
