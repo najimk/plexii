@@ -1,0 +1,19 @@
+uuid: 1e9bba1b-0079-47a0-b5b7-93147797a3e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer_contact
+    - field.storage.block_content.field_office
+id: block_content.footer_contact.field_office
+field_name: field_office
+entity_type: block_content
+bundle: footer_contact
+label: 'Visit our office'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

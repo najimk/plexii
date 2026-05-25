@@ -1,0 +1,25 @@
+uuid: f2612a14-a457-46e8-9063-3a960244e12d
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - plexii
+id: plexii_footer
+theme: plexii
+region: footer_nav
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Footer
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

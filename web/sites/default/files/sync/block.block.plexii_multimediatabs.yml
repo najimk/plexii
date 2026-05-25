@@ -1,0 +1,23 @@
+uuid: 6ea17d15-0a53-4e4c-9b05-df14d26bbfdd
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4567376e-ce8c-4d8a-b238-9321971484b5'
+  module:
+    - block_content
+  theme:
+    - plexii
+id: plexii_multimediatabs
+theme: plexii
+region: multimedia
+weight: -8
+provider: null
+plugin: 'block_content:4567376e-ce8c-4d8a-b238-9321971484b5'
+settings:
+  id: 'block_content:4567376e-ce8c-4d8a-b238-9321971484b5'
+  label: 'Multimedia Tabs'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

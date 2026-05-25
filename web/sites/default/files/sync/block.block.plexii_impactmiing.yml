@@ -1,0 +1,28 @@
+uuid: ae1f6af3-ae89-4e80-9d77-bd91fc6e095a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:footer_contact:8db158f8-c1c8-4239-8b23-29da8c694a27'
+  module:
+    - block_content
+    - system
+  theme:
+    - plexii
+id: plexii_impactmiing
+theme: plexii
+region: content
+weight: -15
+provider: null
+plugin: 'block_content:8db158f8-c1c8-4239-8b23-29da8c694a27'
+settings:
+  id: 'block_content:8db158f8-c1c8-4239-8b23-29da8c694a27'
+  label: "Let's Make an impact in mining Together"
+  label_display: visible
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/contacts\r\n/node/17"

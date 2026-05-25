@@ -1,0 +1,143 @@
+uuid: 26df28f3-9c9c-4a8a-9a1e-b51fd1ff6b84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.media_gallery.field_gallery_type
+    - field.field.node.media_gallery.field_image
+    - field.field.node.media_gallery.field_photos
+    - field.field.node.media_gallery.field_video
+    - node.type.media_gallery
+  module:
+    - conditional_fields
+    - media_library
+    - path
+id: node.media_gallery.default
+targetEntityType: node
+bundle: media_gallery
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_gallery_type:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_image:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings:
+      conditional_fields:
+        11129e76-6b4b-4d71-afc8-cf990a84ee69:
+          entity_type: node
+          bundle: media_gallery
+          dependee: field_gallery_type
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: photo_gallery
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_photos:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings:
+      conditional_fields:
+        02d8f289-a9e3-4576-be29-0b4e92293f5b:
+          entity_type: node
+          bundle: media_gallery
+          dependee: field_gallery_type
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: photo_gallery
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_video:
+    type: media_library_widget
+    weight: 4
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings:
+      conditional_fields:
+        379dae1c-39ab-4383-a2f4-2e107174cd1f:
+          entity_type: node
+          bundle: media_gallery
+          dependee: field_gallery_type
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: video_gallery
+            effect: show
+            effect_options: {  }
+            selector: ''
+  path:
+    type: path
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

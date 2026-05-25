@@ -1,0 +1,27 @@
+uuid: 25ed4992-fc6d-4b95-ad1c-515bb9f30ec9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_gallery_type
+field_name: field_gallery_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: photo_gallery
+      label: 'Photo Gallery'
+    -
+      value: video_gallery
+      label: 'Video Gallery'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

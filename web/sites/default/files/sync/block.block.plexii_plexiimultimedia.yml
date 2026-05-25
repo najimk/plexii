@@ -1,0 +1,28 @@
+uuid: 13115681-c5dc-4cf0-90bc-f9574e291062
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c9be227f-5d64-490f-9ff6-70e89567cf1d'
+  module:
+    - block_content
+    - system
+  theme:
+    - plexii
+id: plexii_plexiimultimedia
+theme: plexii
+region: multimedia
+weight: -9
+provider: null
+plugin: 'block_content:c9be227f-5d64-490f-9ff6-70e89567cf1d'
+settings:
+  id: 'block_content:c9be227f-5d64-490f-9ff6-70e89567cf1d'
+  label: 'PLEXII Multimedia'
+  label_display: visible
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

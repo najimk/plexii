@@ -1,0 +1,20 @@
+uuid: 984cd901-f6bd-4556-a4d9-57d80ce4742a
+langcode: en
+status: false
+dependencies:
+  theme:
+    - plexii
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: plexii_primary_admin_actions
+theme: plexii
+region: topbar
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

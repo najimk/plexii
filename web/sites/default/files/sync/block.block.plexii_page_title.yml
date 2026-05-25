@@ -1,0 +1,20 @@
+uuid: b878cdbf-83ac-4221-890d-0079edb95dad
+langcode: en
+status: false
+dependencies:
+  theme:
+    - plexii
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: plexii_page_title
+theme: plexii
+region: topbar
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

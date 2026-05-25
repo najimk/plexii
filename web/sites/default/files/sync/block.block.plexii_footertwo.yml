@@ -1,0 +1,25 @@
+uuid: fd9ec96d-f0e5-4c83-b4ed-32d35e64e57b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-two
+  module:
+    - system
+  theme:
+    - plexii
+id: plexii_footertwo
+theme: plexii
+region: footer_nav
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-two'
+settings:
+  id: 'system_menu_block:footer-two'
+  label: 'Footer Two'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

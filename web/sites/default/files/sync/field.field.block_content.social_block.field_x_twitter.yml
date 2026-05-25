@@ -1,0 +1,19 @@
+uuid: ba8b311a-cb28-4939-895d-ee775b25c42f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social_block
+    - field.storage.block_content.field_x_twitter
+id: block_content.social_block.field_x_twitter
+field_name: field_x_twitter
+entity_type: block_content
+bundle: social_block
+label: X-Twitter
+description: 'Your URL for x - Twitter'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

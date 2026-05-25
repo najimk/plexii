@@ -335,12 +335,15 @@ display:
       tags:
         - 'config:field.storage.node.field_partner_logo'
         - 'config:field.storage.node.field_partner_url'
-  parntersblok:
-    id: parntersblok
+  patblok:
+    id: patblok
     display_title: Partners
     display_plugin: block
     position: 1
     display_options:
+      defaults:
+        css_class: false
+      css_class: partners-card
       display_description: ''
       display_extenders: {  }
       block_description: Partners

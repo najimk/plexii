@@ -1,0 +1,39 @@
+uuid: ac7b35ca-7ba4-48f3-9f95-d915fa8cf6b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.advert_block
+    - field.field.block_content.advert_block.field_ad_banner
+    - field.field.block_content.advert_block.field_ad_link
+    - field.field.block_content.advert_block.field_advert_type
+  module:
+    - link
+id: block_content.advert_block.default
+targetEntityType: block_content
+bundle: advert_block
+mode: default
+content:
+  field_ad_banner:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ad_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_advert_type: true

@@ -1,0 +1,11 @@
+uuid: 238486c4-5752-4a3b-afcb-115064a702ce
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.story_image_url
+label: 'Image URL'
+description: null
+targetEntityType: media
+cache: true

@@ -1,0 +1,8 @@
+uuid: bee1f586-2101-4450-966b-9cf42cafd543
+langcode: en
+status: true
+dependencies: {  }
+id: footer-two
+label: 'Footer Two'
+description: 'second footer menu'
+locked: false

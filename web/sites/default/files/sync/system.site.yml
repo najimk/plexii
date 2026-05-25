@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
+langcode: en
+uuid: 1620511c-4157-41ac-8df7-7a9d4359cb60
+name: 'PLEXII - Platform for Environment and Extractive Industries Information '
+mail: naj.naj001@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/9
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: null

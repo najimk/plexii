@@ -1,0 +1,10 @@
+uuid: b617b74b-d359-47eb-a624-40bc8ed71886
+langcode: en
+status: true
+dependencies: {  }
+id: our_vision
+label: 'Our vision'
+icon_uuid: null
+icon_default: null
+description: 'create our vision section on the about page'
+behavior_plugins: {  }

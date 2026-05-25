@@ -1,0 +1,19 @@
+id: date_author
+label: 'Date Author'
+ui_limit: ''
+type: block
+type_label: 'Block field'
+entities:
+  node: node
+properties:
+  block: 'views_block:article_information-block_1'
+  use_block_title: false
+  add_block_wrappers: false
+  config:
+    id: 'views_block:article_information-block_1'
+    label: ''
+    label_display: visible
+    provider: views
+    context_mapping: {  }
+    views_label: ''
+    items_per_page: null

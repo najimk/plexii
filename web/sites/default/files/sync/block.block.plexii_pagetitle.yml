@@ -1,0 +1,18 @@
+uuid: 9a6c99c6-11a6-445b-822c-94ccbfd178e3
+langcode: en
+status: true
+dependencies:
+  theme:
+    - plexii
+id: plexii_pagetitle
+theme: plexii
+region: page_header
+weight: -14
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

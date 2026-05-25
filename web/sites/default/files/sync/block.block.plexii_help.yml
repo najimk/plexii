@@ -1,0 +1,22 @@
+uuid: 44f6965c-73b7-4f3f-9fbd-3520a3fff8e5
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - plexii
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: plexii_help
+theme: plexii
+region: topbar
+weight: -1
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

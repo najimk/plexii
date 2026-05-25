@@ -1,0 +1,28 @@
+uuid: 6b3fe7ae-6b7f-47d7-b7e5-bda4b4a7a227
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.publications.field_document
+    - field.field.node.publications.field_document_summary
+    - field.field.node.publications.field_publication_type
+    - field.field.node.publications.field_thumbnail_image
+    - node.type.publications
+  module:
+    - user
+id: node.publications.full
+targetEntityType: node
+bundle: publications
+mode: full
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_document: true
+  field_document_summary: true
+  field_publication_type: true
+  field_thumbnail_image: true

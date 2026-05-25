@@ -1,0 +1,9 @@
+uuid: 584307a4-6f1d-4f07-aa2c-3192143f1331
+langcode: en
+status: true
+dependencies: {  }
+name: Section
+vid: section
+description: 'The section in which this article falls'
+weight: 0
+new_revision: false

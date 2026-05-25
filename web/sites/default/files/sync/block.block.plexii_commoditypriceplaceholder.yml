@@ -1,0 +1,23 @@
+uuid: 49a291d0-93cf-47ae-9b9e-5c98f3d38714
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:74ecbc60-03d9-44a3-8503-78d18ad8ae46'
+  module:
+    - block_content
+  theme:
+    - plexii
+id: plexii_commoditypriceplaceholder
+theme: plexii
+region: commodity_bar
+weight: -16
+provider: null
+plugin: 'block_content:74ecbc60-03d9-44a3-8503-78d18ad8ae46'
+settings:
+  id: 'block_content:74ecbc60-03d9-44a3-8503-78d18ad8ae46'
+  label: 'Commodity Price Placeholder'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,8 @@
+uuid: 8d5e0137-bd94-4e14-9bea-8390f2afeece
+langcode: en
+status: true
+dependencies: {  }
+id: link_block
+label: 'Link Block'
+revision: false
+description: 'For creating custom link card blocks on the website'

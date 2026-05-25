@@ -1,0 +1,28 @@
+uuid: 00d66ad0-b6d9-444d-8953-3393004af71f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:link_block:ab5dca4f-5569-43f5-8c0f-0594b3c58932'
+  module:
+    - block_content
+    - system
+  theme:
+    - plexii
+id: plexii_libcard
+theme: plexii
+region: lib_partners
+weight: -14
+provider: null
+plugin: 'block_content:ab5dca4f-5569-43f5-8c0f-0594b3c58932'
+settings:
+  id: 'block_content:ab5dca4f-5569-43f5-8c0f-0594b3c58932'
+  label: 'Reports, Magazines, Policies & Laws'
+  label_display: visible
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

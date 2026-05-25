@@ -1,0 +1,29 @@
+uuid: b83b5591-8fcb-41fb-b91f-a1c9a71a7cdd
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.library-sub-menu
+  module:
+    - system
+  theme:
+    - plexii
+id: plexii_librarysubmenu
+theme: plexii
+region: content
+weight: -17
+provider: null
+plugin: 'system_menu_block:library-sub-menu'
+settings:
+  id: 'system_menu_block:library-sub-menu'
+  label: 'Library Sub Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/library\r\n/library/*"

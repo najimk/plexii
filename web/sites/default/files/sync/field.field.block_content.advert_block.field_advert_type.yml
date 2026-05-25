@@ -1,0 +1,21 @@
+uuid: bafc51c8-cf10-4072-9de9-23de2fca24c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.advert_block
+    - field.storage.block_content.field_advert_type
+  module:
+    - options
+id: block_content.advert_block.field_advert_type
+field_name: field_advert_type
+entity_type: block_content
+bundle: advert_block
+label: 'Advert Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

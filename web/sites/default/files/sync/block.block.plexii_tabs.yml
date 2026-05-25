@@ -1,0 +1,26 @@
+uuid: dca4a442-3850-4116-a406-96c654bdd1bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - plexii
+id: plexii_tabs
+theme: plexii
+region: content
+weight: -18
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

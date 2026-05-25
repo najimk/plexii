@@ -1,0 +1,17 @@
+id: share
+label: Share
+ui_limit: ''
+type: block
+type_label: 'Block field'
+entities:
+  node: node
+properties:
+  block: 'block_content:f595df82-452e-4801-bff6-89842424061c'
+  use_block_title: false
+  add_block_wrappers: false
+  config:
+    id: 'block_content:f595df82-452e-4801-bff6-89842424061c'
+    label: ''
+    label_display: visible
+    provider: block_content
+    view_mode: full

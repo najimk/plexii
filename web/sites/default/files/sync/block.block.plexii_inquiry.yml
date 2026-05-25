@@ -1,0 +1,23 @@
+uuid: 13059792-3ee8-4389-8030-465f46762eec
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:8b5ae9d1-a520-46c3-ad89-74b6e72b1b4a'
+  module:
+    - block_content
+  theme:
+    - plexii
+id: plexii_inquiry
+theme: plexii
+region: branding
+weight: -15
+provider: null
+plugin: 'block_content:8b5ae9d1-a520-46c3-ad89-74b6e72b1b4a'
+settings:
+  id: 'block_content:8b5ae9d1-a520-46c3-ad89-74b6e72b1b4a'
+  label: Inquiry
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

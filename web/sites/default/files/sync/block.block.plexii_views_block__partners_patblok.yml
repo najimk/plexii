@@ -1,0 +1,29 @@
+uuid: ebadcc9b-2773-4538-b60a-9d3b45b27cbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.partners
+  module:
+    - system
+    - views
+  theme:
+    - plexii
+id: plexii_views_block__partners_patblok
+theme: plexii
+region: lib_partners
+weight: 0
+provider: null
+plugin: 'views_block:partners-patblok'
+settings:
+  id: 'views_block:partners-patblok'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

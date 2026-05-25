@@ -1,0 +1,38 @@
+uuid: 7d15d00f-ecbe-4f67-a550-1e6c972df348
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.topic_marque
+    - field.field.block_content.topic_marque.field_topic_one
+    - field.field.block_content.topic_marque.field_topic_two
+id: block_content.topic_marque.default
+targetEntityType: block_content
+bundle: topic_marque
+mode: default
+content:
+  field_topic_one:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_topic_two:
+    type: string_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

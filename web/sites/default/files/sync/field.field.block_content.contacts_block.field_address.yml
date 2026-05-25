@@ -1,0 +1,19 @@
+uuid: 8e2398b6-8eea-4be8-942c-f631ba92a102
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contacts_block
+    - field.storage.block_content.field_address
+id: block_content.contacts_block.field_address
+field_name: field_address
+entity_type: block_content
+bundle: contacts_block
+label: Address
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

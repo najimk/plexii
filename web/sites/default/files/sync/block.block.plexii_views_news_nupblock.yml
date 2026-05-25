@@ -1,0 +1,29 @@
+uuid: 5f4253d9-ac32-4a73-b388-e53cc402cded
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news_and_updates
+  module:
+    - system
+    - views
+  theme:
+    - plexii
+id: plexii_views_news_nupblock
+theme: plexii
+region: preface
+weight: 0
+provider: null
+plugin: 'views_block:news_and_updates-nupblock'
+settings:
+  id: 'views_block:news_and_updates-nupblock'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -1,0 +1,15 @@
+uuid: 590c5442-6531-4d0e-ba26-a20cf1e2a116
+langcode: en
+status: true
+dependencies: {  }
+name: story_lead_image
+label: 'Story Lead Image'
+effects:
+  988aed36-592f-4ce1-a01c-068039bc1b49:
+    uuid: 988aed36-592f-4ce1-a01c-068039bc1b49
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 850
+      height: 540
+      anchor: center-center

@@ -1,0 +1,22 @@
+uuid: 189bf31b-1dd5-44d6-899f-b2b8f4258208
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - plexii
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: plexii_breadcrumbs
+theme: plexii
+region: page_header
+weight: -13
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

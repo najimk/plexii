@@ -1,0 +1,30 @@
+uuid: 41174bd7-e4f3-4240-9d3f-5805bb379324
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.story_image_url
+    - field.field.media.image.field_media_image
+    - media.type.image
+  module:
+    - image
+_core:
+  default_config_hash: 73xaTNkI5J6sfFcBmNYeuk070X3mQS_iwwWaPYyfG2M
+id: media.image.story_image_url
+targetEntityType: media
+bundle: image
+mode: story_image_url
+content:
+  field_media_image:
+    type: image_url
+    label: inline
+    settings:
+      image_style: story_lead_image
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

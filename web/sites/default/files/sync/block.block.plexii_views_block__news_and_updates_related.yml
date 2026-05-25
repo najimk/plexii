@@ -1,0 +1,33 @@
+uuid: 93f40c9f-b37b-4d32-990b-5df779a8d6c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news_and_updates
+  module:
+    - node
+    - views
+  theme:
+    - plexii
+id: plexii_views_block__news_and_updates_related
+theme: plexii
+region: content_bottom
+weight: 0
+provider: null
+plugin: 'views_block:news_and_updates-related'
+settings:
+  id: 'views_block:news_and_updates-related'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: null
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article

@@ -1,0 +1,20 @@
+uuid: 6b02e7a7-8d4c-4e61-9e3c-95e8b8e67d8c
+langcode: en
+status: true
+dependencies:
+  module:
+    - mailchimp_signup
+  theme:
+    - plexii
+id: plexii_mcplexii
+theme: plexii
+region: footer_info
+weight: -16
+provider: null
+plugin: 'mailchimp_signup_subscribe_block:plexii_newsletter'
+settings:
+  id: 'mailchimp_signup_subscribe_block:plexii_newsletter'
+  label: 'Stay updated with our news'
+  label_display: visible
+  provider: mailchimp_signup
+visibility: {  }

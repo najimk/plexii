@@ -1,0 +1,19 @@
+uuid: 8ee95e91-02dc-471c-9d47-9facf34a2a12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document_summary
+    - node.type.publications
+id: node.publications.field_document_summary
+field_name: field_document_summary
+entity_type: node
+bundle: publications
+label: 'Document Summary'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

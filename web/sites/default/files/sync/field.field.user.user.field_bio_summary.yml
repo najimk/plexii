@@ -1,0 +1,20 @@
+uuid: eeddace4-5469-4942-9116-aaf1da841422
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_bio_summary
+  module:
+    - user
+id: user.user.field_bio_summary
+field_name: field_bio_summary
+entity_type: user
+bundle: user
+label: 'Bio / Summary'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

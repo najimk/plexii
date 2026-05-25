@@ -1,0 +1,41 @@
+uuid: 5ece8989-150b-465a-9856-3e1c0bbedead
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.our_vision.field_vision_body
+    - field.field.paragraph.our_vision.field_vision_image
+    - field.field.paragraph.our_vision.field_vision_title
+    - paragraphs.paragraphs_type.our_vision
+  module:
+    - text
+id: paragraph.our_vision.default
+targetEntityType: paragraph
+bundle: our_vision
+mode: default
+content:
+  field_vision_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_vision_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_vision_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

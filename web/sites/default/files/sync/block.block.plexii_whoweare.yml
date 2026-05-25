@@ -1,0 +1,23 @@
+uuid: 1e436d1b-af08-4881-ad8f-69b1079f7f05
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a3fb7b7c-4fd1-415b-af34-96f00c9928a3'
+  module:
+    - block_content
+  theme:
+    - plexii
+id: plexii_whoweare
+theme: plexii
+region: footer_info
+weight: -17
+provider: null
+plugin: 'block_content:a3fb7b7c-4fd1-415b-af34-96f00c9928a3'
+settings:
+  id: 'block_content:a3fb7b7c-4fd1-415b-af34-96f00c9928a3'
+  label: 'Who we are'
+  label_display: visible
+  provider: block_content
+  view_mode: full
+visibility: {  }

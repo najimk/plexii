@@ -1,0 +1,27 @@
+uuid: 318afdc4-1d8a-4ac6-9718-2395972ddccc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.link_block
+    - field.field.block_content.link_block.field_card_link
+  module:
+    - link
+id: block_content.link_block.default
+targetEntityType: block_content
+bundle: link_block
+mode: default
+content:
+  field_card_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

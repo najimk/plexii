@@ -1,0 +1,10 @@
+uuid: bf6a3068-fe79-4bd1-ab00-f16755571880
+langcode: en
+status: true
+dependencies: {  }
+id: who_we_are
+label: 'Who we are'
+icon_uuid: null
+icon_default: null
+description: 'For creating the "Who we are" block on the about page.'
+behavior_plugins: {  }

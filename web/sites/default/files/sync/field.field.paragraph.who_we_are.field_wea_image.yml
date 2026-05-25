@@ -1,0 +1,29 @@
+uuid: f81a9c80-29f2-4cdb-ab26-a3fa4f5b13b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_wea_image
+    - media.type.image
+    - paragraphs.paragraphs_type.who_we_are
+id: paragraph.who_we_are.field_wea_image
+field_name: field_wea_image
+entity_type: paragraph
+bundle: who_we_are
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,15 @@
+uuid: 66280a98-e8f4-4ea4-8855-e62dfbaa953d
+langcode: en
+status: true
+dependencies: {  }
+name: publication_thumbnail
+label: 'Publication thumbnail'
+effects:
+  60c7f1be-4a9f-4dde-b074-8107b60d7c79:
+    uuid: 60c7f1be-4a9f-4dde-b074-8107b60d7c79
+    id: image_scale
+    weight: 1
+    data:
+      width: 325
+      height: 468
+      upscale: false

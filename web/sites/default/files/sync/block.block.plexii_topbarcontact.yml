@@ -1,0 +1,23 @@
+uuid: d413d70b-7acf-46ce-bca3-ded415773947
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:contacts_block:225ea295-302a-473d-ac16-c6a8f95108e6'
+  module:
+    - block_content
+  theme:
+    - plexii
+id: plexii_topbarcontact
+theme: plexii
+region: topbar
+weight: 0
+provider: null
+plugin: 'block_content:225ea295-302a-473d-ac16-c6a8f95108e6'
+settings:
+  id: 'block_content:225ea295-302a-473d-ac16-c6a8f95108e6'
+  label: 'Topbar contact information'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

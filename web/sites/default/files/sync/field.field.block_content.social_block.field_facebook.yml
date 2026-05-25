@@ -1,0 +1,19 @@
+uuid: e2b6ed2b-3d42-4a0f-9941-549eb00a76a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social_block
+    - field.storage.block_content.field_facebook
+id: block_content.social_block.field_facebook
+field_name: field_facebook
+entity_type: block_content
+bundle: social_block
+label: Facebook
+description: 'Your Facebook URL'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

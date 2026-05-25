@@ -1,0 +1,31 @@
+uuid: 4b3b0fb3-eb66-44ff-b03d-5d49ceed89b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.contact
+  module:
+    - system
+    - webform
+  theme:
+    - plexii
+id: plexii_webform
+theme: plexii
+region: content
+weight: -14
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Webform
+  label_display: '0'
+  provider: webform
+  webform_id: contact
+  default_data: ''
+  redirect: false
+  lazy: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/node/17\r\n/contacts"

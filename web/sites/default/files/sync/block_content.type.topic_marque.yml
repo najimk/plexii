@@ -1,0 +1,8 @@
+uuid: 9421dad7-4640-41bb-bbb2-06f239583251
+langcode: en
+status: true
+dependencies: {  }
+id: topic_marque
+label: 'Topic Marque'
+revision: false
+description: 'create a sliding text of the PLEXII topic'

@@ -1,0 +1,23 @@
+uuid: 23c7102d-c48d-47b9-b442-66a8ad090dbc
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:afea9a7e-dcc0-479d-89e7-4daff4aeceae'
+  module:
+    - block_content
+  theme:
+    - plexii
+id: plexii_footerbranding
+theme: plexii
+region: footer_top
+weight: -12
+provider: null
+plugin: 'block_content:afea9a7e-dcc0-479d-89e7-4daff4aeceae'
+settings:
+  id: 'block_content:afea9a7e-dcc0-479d-89e7-4daff4aeceae'
+  label: 'PLEXII ACEMP Product'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,28 @@
+uuid: f022211d-dc38-48a6-8a03-d5fa7c4845ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.media_gallery.field_gallery_type
+    - field.field.node.media_gallery.field_image
+    - field.field.node.media_gallery.field_photos
+    - field.field.node.media_gallery.field_video
+    - node.type.media_gallery
+  module:
+    - user
+id: node.media_gallery.full
+targetEntityType: node
+bundle: media_gallery
+mode: full
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_gallery_type: true
+  field_image: true
+  field_photos: true
+  field_video: true

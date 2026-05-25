@@ -1,0 +1,24 @@
+uuid: c6807417-6d96-4a07-85fa-c857febff12a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sub_title
+    - filter.format.plain_html
+    - paragraphs.paragraphs_type.who_we_are
+  module:
+    - text
+id: paragraph.who_we_are.field_sub_title
+field_name: field_sub_title
+entity_type: paragraph
+bundle: who_we_are
+label: 'Sub Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_html
+field_type: text

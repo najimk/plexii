@@ -1,0 +1,11 @@
+uuid: 5eeaaeaa-fb73-42e1-9268-5cbe3165542d
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.full_lead_image
+label: 'Full Lead Image'
+description: null
+targetEntityType: media
+cache: true

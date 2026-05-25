@@ -1,0 +1,17 @@
+uuid: 6b57d706-07d1-4fc3-86e3-57b2a2e679f4
+langcode: en
+status: true
+dependencies: {  }
+name: 'Plain HTML'
+format: plain_html
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -10
+    settings:
+      allowed_html: ''
+      filter_html_help: true
+      filter_html_nofollow: false

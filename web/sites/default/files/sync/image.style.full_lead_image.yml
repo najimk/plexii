@@ -1,0 +1,15 @@
+uuid: 67a5972f-2865-4ffb-b567-a98029291ac3
+langcode: en
+status: true
+dependencies: {  }
+name: full_lead_image
+label: 'Full Lead Image'
+effects:
+  04dc3266-6fbc-4e12-8e83-8a3374a2d8dc:
+    uuid: 04dc3266-6fbc-4e12-8e83-8a3374a2d8dc
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1455
+      height: 860
+      anchor: center-center

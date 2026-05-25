@@ -1,0 +1,8 @@
+uuid: 8d91a13b-b2f6-47c9-9f49-6343a9ad5a34
+langcode: en
+status: true
+dependencies: {  }
+id: advert_block
+label: 'Advert Block'
+revision: false
+description: 'Used for display advert block on the website'

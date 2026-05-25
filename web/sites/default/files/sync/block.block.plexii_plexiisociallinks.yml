@@ -1,0 +1,23 @@
+uuid: fe9afa08-3912-4463-a518-e83d85cc1cd7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:social_block:698c4b36-74fa-48e8-a19b-7a51332aa007'
+  module:
+    - block_content
+  theme:
+    - plexii
+id: plexii_plexiisociallinks
+theme: plexii
+region: topbar
+weight: 0
+provider: null
+plugin: 'block_content:698c4b36-74fa-48e8-a19b-7a51332aa007'
+settings:
+  id: 'block_content:698c4b36-74fa-48e8-a19b-7a51332aa007'
+  label: 'PLEXII Social Links'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

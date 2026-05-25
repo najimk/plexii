@@ -1,0 +1,406 @@
+uuid: 936c258d-1aef-4367-8b63-0fe21a3ec461
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.article.body
+    - field.field.node.article.comment
+    - field.field.node.article.field_article_credits
+    - field.field.node.article.field_category
+    - field.field.node.article.field_image
+    - field.field.node.article.field_section
+    - field.field.node.article.field_sub_title
+    - field.field.node.article.field_tags
+    - node.type.article
+  module:
+    - ds
+    - field_group
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      ds_content:
+        - group_article_wrapper
+        - node_title
+        - 'dynamic_block_field:node-date_author'
+        - 'dynamic_block_field:node-share'
+        - field_sub_title
+        - 'dynamic_block_field:node-author'
+        - group_article_meta
+        - field_image
+        - body
+        - field_article_credits
+        - group_inner
+        - field_tags
+        - group_sharebar
+        - group_head_wrap
+        - group_hed_inner
+        - group_lead_image
+        - group_body
+    fields:
+      'dynamic_block_field:node-author':
+        plugin_id: 'dynamic_block_field:node-author'
+        weight: 1
+        label: hidden
+        formatter: default
+        ft:
+          id: reset
+          settings:
+            lb: ''
+      'dynamic_block_field:node-date_author':
+        plugin_id: 'dynamic_block_field:node-date_author'
+        weight: 0
+        label: hidden
+        formatter: default
+      'dynamic_block_field:node-share':
+        plugin_id: 'dynamic_block_field:node-share'
+        weight: 0
+        label: hidden
+        formatter: default
+        ft:
+          id: reset
+          settings:
+            lb: ''
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          link: false
+          'link class': ''
+          link_target: ''
+          wrapper: h1
+          class: article-title
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_group:
+    group_article_wrapper:
+      children:
+        - group_inner
+      label: 'Article Wrapper'
+      parent_name: ''
+      region: ds_content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: 'article-section site-section'
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: article
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_inner:
+      children:
+        - group_head_wrap
+        - group_lead_image
+        - group_body
+      label: 'Article Inner'
+      parent_name: group_article_wrapper
+      region: ds_content
+      weight: 6
+      format_type: html_element
+      format_settings:
+        classes: article-inner
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_head_wrap:
+      children:
+        - group_hed_inner
+      label: 'Head Wrap'
+      parent_name: group_inner
+      region: ds_content
+      weight: 21
+      format_type: html_element
+      format_settings:
+        classes: article-header-wrap
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_hed_inner:
+      children:
+        - node_title
+        - field_sub_title
+        - group_article_meta
+      label: 'Hed inner'
+      parent_name: group_head_wrap
+      region: ds_content
+      weight: 21
+      format_type: html_element
+      format_settings:
+        classes: article-header-inner
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_article_meta:
+      children:
+        - 'dynamic_block_field:node-date_author'
+      label: 'Article Meta'
+      parent_name: group_hed_inner
+      region: ds_content
+      weight: 2
+      format_type: html_element
+      format_settings:
+        classes: article-meta
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_lead_image:
+      children:
+        - field_image
+      label: 'Lead Image'
+      parent_name: group_inner
+      region: ds_content
+      weight: 22
+      format_type: html_element
+      format_settings:
+        classes: article-hero
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_body:
+      children:
+        - body
+        - field_article_credits
+        - field_tags
+        - group_sharebar
+      label: Body
+      parent_name: group_inner
+      region: ds_content
+      weight: 23
+      format_type: html_element
+      format_settings:
+        classes: article-body
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_sharebar:
+      children:
+        - 'dynamic_block_field:node-share'
+        - 'dynamic_block_field:node-author'
+      label: sharebar
+      parent_name: group_body
+      region: ds_content
+      weight: 7
+      format_type: html_element
+      format_settings:
+        classes: article-share-bar
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+_core:
+  default_config_hash: br6izr-iGEu--JvNbCJNtOBpRnxpFLXfoV5y61U9Nqc
+id: node.article.full
+targetEntityType: node
+bundle: article
+mode: full
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: ds_content
+  field_article_credits:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            lbw: false
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            lb-col: false
+            ow: false
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fis-def-at: false
+            fi: true
+            fi-el: p
+            fi-cl: article-funding-note
+            fi-at: ''
+            fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 5
+    region: ds_content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: full_lead_image
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    weight: 3
+    region: ds_content
+  field_sub_title:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            lbw: false
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            lb-col: false
+            ow: false
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fis-def-at: false
+            fi: true
+            fi-el: p
+            fi-cl: article-subtitle
+            fi-at: ''
+            fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 1
+    region: ds_content
+  field_tags:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            lbw: true
+            lbw-el: span
+            lbw-cl: article-tags-label
+            lbw-at: ''
+            lb-col: false
+            ow: true
+            ow-el: div
+            ow-cl: article-tags
+            ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: true
+            fis-el: div
+            fis-cl: article-tags-list
+            fis-at: ''
+            fis-def-at: false
+            fi: false
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 6
+    region: ds_content
+hidden:
+  comment: true
+  field_category: true
+  field_section: true
+  links: true

@@ -1,0 +1,19 @@
+uuid: 5c46d2f4-92bc-44a1-bc1f-78509a412d67
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.topic_marque
+    - field.storage.block_content.field_topic_one
+id: block_content.topic_marque.field_topic_one
+field_name: field_topic_one
+entity_type: block_content
+bundle: topic_marque
+label: 'Topic one'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,24 @@
+uuid: ecb4a254-7690-48c1-8005-10116933dd6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_vision_body
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.our_vision
+  module:
+    - text
+id: paragraph.our_vision.field_vision_body
+field_name: field_vision_body
+entity_type: paragraph
+bundle: our_vision
+label: 'Vision Body'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

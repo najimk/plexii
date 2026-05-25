@@ -1,0 +1,49 @@
+uuid: 75736837-8602-4678-8e8a-b7858b1040b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.who_we_are.field_body_text
+    - field.field.paragraph.who_we_are.field_exp_box
+    - field.field.paragraph.who_we_are.field_sub_title
+    - field.field.paragraph.who_we_are.field_wea_image
+    - paragraphs.paragraphs_type.who_we_are
+  module:
+    - text
+id: paragraph.who_we_are.default
+targetEntityType: paragraph
+bundle: who_we_are
+mode: default
+content:
+  field_body_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_exp_box:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_sub_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_wea_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

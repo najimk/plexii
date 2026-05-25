@@ -1,0 +1,24 @@
+uuid: c99f1f8a-54ea-4ab9-a981-5a3de1dfbdb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body_text
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.who_we_are
+  module:
+    - text
+id: paragraph.who_we_are.field_body_text
+field_name: field_body_text
+entity_type: paragraph
+bundle: who_we_are
+label: 'Body Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

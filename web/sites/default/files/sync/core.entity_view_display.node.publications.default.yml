@@ -1,0 +1,59 @@
+uuid: f4b6d6b8-3854-4f0c-b9d1-e0a77ec570d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.publications.field_document
+    - field.field.node.publications.field_document_summary
+    - field.field.node.publications.field_publication_type
+    - field.field.node.publications.field_thumbnail_image
+    - node.type.publications
+  module:
+    - file
+    - image
+    - user
+id: node.publications.default
+targetEntityType: node
+bundle: publications
+mode: default
+content:
+  field_document:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_document_summary:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_publication_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_thumbnail_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

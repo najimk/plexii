@@ -1,0 +1,25 @@
+uuid: c158a22f-953d-4b2e-94c5-02b565eef2b7
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - plexii
+_core:
+  default_config_hash: '-OAAZDw1OR_UyAEPEKX0Hu4LaZD149vW9PmMnIC-v0o'
+id: plexii_site_branding
+theme: plexii
+region: branding
+weight: -17
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

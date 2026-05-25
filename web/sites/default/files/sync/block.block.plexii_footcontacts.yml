@@ -1,0 +1,23 @@
+uuid: e406e6e9-8772-4d3c-a9c2-e6b5f0380023
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:footer_contact:08f45d80-c787-4d80-b242-832a65bb6506'
+  module:
+    - block_content
+  theme:
+    - plexii
+id: plexii_footcontacts
+theme: plexii
+region: footer_top
+weight: -11
+provider: null
+plugin: 'block_content:08f45d80-c787-4d80-b242-832a65bb6506'
+settings:
+  id: 'block_content:08f45d80-c787-4d80-b242-832a65bb6506'
+  label: 'Footer Contacts'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

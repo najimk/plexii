@@ -1,0 +1,30 @@
+uuid: d402b1d4-eaf1-4130-a7d3-72c451b1c4e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.topic_marque
+    - field.field.block_content.topic_marque.field_topic_one
+    - field.field.block_content.topic_marque.field_topic_two
+id: block_content.topic_marque.default
+targetEntityType: block_content
+bundle: topic_marque
+mode: default
+content:
+  field_topic_one:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_topic_two:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

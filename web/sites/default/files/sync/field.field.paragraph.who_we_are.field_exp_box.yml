@@ -1,0 +1,19 @@
+uuid: a8d7ddd1-f6e8-4a02-8420-68fbe489e3bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_exp_box
+    - paragraphs.paragraphs_type.who_we_are
+id: paragraph.who_we_are.field_exp_box
+field_name: field_exp_box
+entity_type: paragraph
+bundle: who_we_are
+label: 'Years of Work Experience'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

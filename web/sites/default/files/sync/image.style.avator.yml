@@ -1,0 +1,15 @@
+uuid: b9157a3a-1a70-4e9e-b6fa-f01a6db5a3ee
+langcode: en
+status: true
+dependencies: {  }
+name: avator
+label: Avator
+effects:
+  5de2823c-c19b-4434-b4b4-c92401197d5d:
+    uuid: 5de2823c-c19b-4434-b4b4-c92401197d5d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 40
+      height: 40
+      anchor: center-center

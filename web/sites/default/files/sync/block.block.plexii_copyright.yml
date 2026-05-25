@@ -1,0 +1,23 @@
+uuid: 1df163ed-83eb-4298-ab17-5f31b34f770a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d7e83602-33b6-4d03-9646-85c81fe9761c'
+  module:
+    - block_content
+  theme:
+    - plexii
+id: plexii_copyright
+theme: plexii
+region: footer_bottom
+weight: 0
+provider: null
+plugin: 'block_content:d7e83602-33b6-4d03-9646-85c81fe9761c'
+settings:
+  id: 'block_content:d7e83602-33b6-4d03-9646-85c81fe9761c'
+  label: Copyright
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

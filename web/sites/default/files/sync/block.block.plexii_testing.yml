@@ -1,0 +1,23 @@
+uuid: c09aba8f-eacd-4e60-8094-adf477a5c5e8
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:839fe963-7e02-4275-957a-04e4c1729034'
+  module:
+    - block_content
+  theme:
+    - plexii
+id: plexii_testing
+theme: plexii
+region: hero
+weight: 0
+provider: null
+plugin: 'block_content:839fe963-7e02-4275-957a-04e4c1729034'
+settings:
+  id: 'block_content:839fe963-7e02-4275-957a-04e4c1729034'
+  label: testing
+  label_display: visible
+  provider: block_content
+  view_mode: full
+visibility: {  }
