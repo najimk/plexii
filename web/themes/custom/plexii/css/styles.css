@@ -751,16 +751,16 @@ a:hover {
     font-size: 0.9375rem;
   }
 }
-.news-card-category.news-card-category--Extractives {
+.news-card-category.news-card-category--extractives {
   background-color: #f16527;
 }
-.news-card-category.news-card-category--Environment {
+.news-card-category.news-card-category--environment {
   background-color: #19a41c;
 }
-.news-card-category.news-card-category--Mining {
+.news-card-category.news-card-category--mining {
   background-color: #1daecc;
 }
-.news-card-category.news-card-category--Oil {
+.news-card-category.news-card-category--oil {
   background-color: #954623;
 }
 .news-card-overlay {
