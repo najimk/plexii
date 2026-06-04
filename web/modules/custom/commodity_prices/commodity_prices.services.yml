@@ -1,0 +1,3 @@
+services:
+  commodity_prices.calculator:
+    class: Drupal\commodity_prices\Service\CommodityCalculator

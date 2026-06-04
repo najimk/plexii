@@ -1,0 +1,23 @@
+<ul class="ticker-content">
+
+  {% for item in items %}
+
+    <li class="ticker-item">
+
+      <span
+        class="ticker-arrow ticker-arrow--{{ item.trend }}">
+      </span>
+
+      <span class="ticker-name">
+        {{ item.name }}
+      </span>
+
+      <span class="ticker-price">
+        {{ item.price }}
+      </span>
+
+    </li>
+
+  {% endfor %}
+
+</ul>

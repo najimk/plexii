@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall hooks.
+ */
+
+use Drupal\commodity_prices\Entity\Commodity;
+
+/**
+ * Implements hook_install().
+ */
+function commodity_prices_install() {
+
+  // Create default configuration.
+  \Drupal::configFactory()
+    ->getEditable('commodity_prices.settings')
+    ->set('currency_symbol', '$')
+    ->set('decimal_places', 2)
+    ->set('default_sort', 'name')
+    ->set('auto_refresh', 60)
+    ->save();
+
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function commodity_prices_uninstall() {
+
+  // Remove module configuration.
+  \Drupal::configFactory()
+    ->getEditable('commodity_prices.settings')
+    ->delete();
+
+}

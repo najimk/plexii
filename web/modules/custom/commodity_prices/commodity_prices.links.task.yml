@@ -1,0 +1,9 @@
+entity.commodity.collection:
+  route_name: entity.commodity.collection
+  title: Commodities
+  base_route: entity.commodity.collection
+
+entity.commodity.add_form:
+  route_name: entity.commodity.add_form
+  title: Add Commodity
+  base_route: entity.commodity.collection

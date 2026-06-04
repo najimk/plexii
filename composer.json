@@ -30,6 +30,8 @@
         "drupal/entity_usage": "^2.0@beta",
         "drupal/feeds": "^3.2",
         "drupal/field_group": "^4.0",
+        "drupal/gin_login": "^2.1",
+        "drupal/gin_toolbar": "^3.0",
         "drupal/honeypot": "^2.2",
         "drupal/imagemagick": "^5.0",
         "drupal/link_attributes": "^2.1",

@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function commodity_prices_theme(
+  $existing,
+  $type,
+  $theme,
+  $path
+) {
+
+  return [
+
+    'commodity_ticker_block' => [
+      'variables' => [
+        'items' => [],
+      ],
+      'template' => 'commodity-ticker-block',
+    ],
+
+  ];
+
+}

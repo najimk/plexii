@@ -1,0 +1,10 @@
+name: Commodity Prices
+type: module
+description: Mineral commodity price management system.
+package: Custom
+core_version_requirement: ^11
+
+dependencies:
+  - drupal:user
+  - drupal:system
+  - drupal:views

@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function commodity_prices_install() {
+
+  \Drupal::messenger()->addStatus(
+    t('Commodity Prices module installed.')
+  );
+
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function commodity_prices_uninstall() {
+
+  \Drupal::messenger()->addStatus(
+    t('Commodity Prices module uninstalled.')
+  );
+
+}

@@ -1,0 +1,39 @@
+entity.commodity.collection:
+  path: "/admin/content/commodities"
+  defaults:
+    _entity_list: "commodity"
+    _title: "Commodity Prices"
+  requirements:
+    _permission: "view commodity entities"
+
+entity.commodity.add_form:
+  path: "/admin/content/commodities/add"
+  defaults:
+    _entity_form: "commodity.add"
+    _title: "Add Commodity"
+  requirements:
+    _permission: "create commodity entities"
+
+entity.commodity.edit_form:
+  path: "/admin/content/commodities/{commodity}/edit"
+  defaults:
+    _entity_form: "commodity.edit"
+    _title: "Edit Commodity"
+  requirements:
+    _permission: "edit commodity entities"
+
+entity.commodity.delete_form:
+  path: "/admin/content/commodities/{commodity}/delete"
+  defaults:
+    _entity_form: "commodity.delete"
+    _title: "Delete Commodity"
+  requirements:
+    _permission: "delete commodity entities"
+
+commodity_prices.dashboard:
+  path: "/admin/content/commodities/dashboard"
+  defaults:
+    _controller: '\Drupal\commodity_prices\Controller\CommodityDashboardController::dashboard'
+    _title: "Commodity Dashboard"
+  requirements:
+    _permission: "administer commodity prices"

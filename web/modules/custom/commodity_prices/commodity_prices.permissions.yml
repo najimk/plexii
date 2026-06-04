@@ -1,0 +1,15 @@
+administer commodity prices:
+  title: Administer Commodity Prices
+  description: Full administration of commodity prices.
+
+create commodity entities:
+  title: Create commodity entities
+
+edit commodity entities:
+  title: Edit commodity entities
+
+delete commodity entities:
+  title: Delete commodity entities
+
+view commodity entities:
+  title: View commodity entities

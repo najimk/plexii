@@ -1,0 +1,11 @@
+entity.commodity.collection:
+  title: "Commodity Prices"
+  route_name: entity.commodity.collection
+  parent: system.admin_content
+  weight: 100
+
+entity.commodity.add_form:
+  title: "Add Commodity"
+  route_name: entity.commodity.add_form
+  parent: entity.commodity.collection
+  weight: 1

@@ -1,0 +1,4 @@
+currency_symbol: "$"
+decimal_places: 2
+default_sort: name
+auto_refresh: 60

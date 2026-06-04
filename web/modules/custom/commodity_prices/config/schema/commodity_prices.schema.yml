@@ -1,0 +1,20 @@
+commodity_prices.settings:
+  type: config_object
+  label: Commodity Prices Settings
+
+  mapping:
+    currency_symbol:
+      type: string
+      label: Currency Symbol
+
+    decimal_places:
+      type: integer
+      label: Decimal Places
+
+    default_sort:
+      type: string
+      label: Default Sort
+
+    auto_refresh:
+      type: integer
+      label: Auto Refresh

@@ -2,3 +2,38 @@
   max-width: 1504px;
   margin: 0px auto;
 }
+
+.author-avatar-wrap {
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #ccc;
+  }
+}
+
+.author-role {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.author-org {
+  font-size: 1.25em;
+}
+
+.author-desc {
+  @media (min-width: 900px) {
+    padding: 0 15%;
+  }
+}
+
+.article-body img {
+  margin-bottom: 0.35em !important;
+}
+
+figcaption {
+  margin-bottom: 25px;
+  padding-top: 0px;
+  margin-top: 0px;
+}
