@@ -3844,6 +3844,13 @@ a:hover {
   max-width: 1502px;
   margin: 0 auto;
   padding: 0.75rem 1.5rem;
+  display: none;
+}
+@media (min-width: 992px) {
+  .article-breadcrumb-inner {
+    font-size: 1rem;
+    display: block;
+  }
 }
 .article-breadcrumb {
   display: flex;
@@ -4205,7 +4212,7 @@ a:hover {
   white-space: nowrap;
   vertical-align: middle;
   border-right: 1px solid #e8e8e8;
-  border-left: 3px solid #f16527;
+  border-left: 1px solid #e8e8e8;
   background: rgba(149, 70, 35, 0.035);
 }
 strong {
