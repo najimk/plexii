@@ -1208,12 +1208,12 @@ a {
 
   @media (max-width: 1200px) {
     flex: 0 0 200px;
-    min-height: 180px;
+    min-height: 220px;
   }
 
   @media (max-width: 480px) {
     flex: 0 0 110px;
-    min-height: 140px;
+    min-height: 190px;
   }
 }
 
@@ -1431,17 +1431,89 @@ a {
 }
 
 // ============================================================
-// News Pagination (news listing page)
+// News Pagination (news listing page + Drupal view pagers)
 // ============================================================
+
+// Container — shared by .news-pagination (prototype) and .pager.news-pagination (Drupal)
 .news-pagination {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
   margin-top: 2.5rem;
+
+  // Drupal full pager — make the <ul> a flex row for the page numbers
+  .pager__items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  .pager__item {
+    list-style: none;
+
+    // First/last not part of the prototype design
+    &--first,
+    &--last {
+      display: none;
+    }
+
+    // Mini-pager current page indicator — hidden, position handled by prev/next
+    &--current {
+      display: none;
+    }
+
+    &--ellipsis {
+      font-family: @font-body;
+      font-size: 0.875rem;
+      color: @text-color;
+      padding: 0 0.15rem;
+    }
+
+    // Numbered page links
+    a {
+      display: inline-flex;
+      align-items: center;
+      font-family: @font-body;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: @text-color;
+      text-decoration: none;
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: @orange;
+      }
+    }
+
+    &.is-active a {
+      color: @orange;
+      font-weight: 700;
+    }
+
+    // Breathing room between page numbers and arrows
+    &--previous {
+      margin-right: 0.5rem;
+    }
+
+    &--next {
+      margin-left: 0.5rem;
+    }
+  }
 }
 
-.news-pagination-btn {
+// ── Shared prev/next button styles ────────────────────────────
+// Covers both prototype (.news-pagination-btn) and Drupal pager links
+.news-pagination-btn,
+.news-pagination .pager__item--previous a,
+.news-pagination .pager__item--next a {
   display: inline-flex;
   align-items: center;
   gap: 0.6em;
@@ -1454,19 +1526,45 @@ a {
   text-transform: uppercase;
   transition: color 0.2s ease;
 
-  svg {
-    transition: transform 0.2s ease;
-  }
-
   &:hover {
     color: @orange;
   }
+}
 
-  &--prev:hover svg {
-    transform: translateX(-4px);
+// ── Prev arrow — ::before pseudo-element ──────────────────────
+.news-pagination-btn--prev,
+.news-pagination .pager__item--previous a {
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 10px;
+    background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2210%22%20viewBox%3D%220%200%2024%2010%22%20fill%3D%22none%22%20stroke%3D%22%23666666%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M24%205%20H3%20M7.5%200.5%20L3%205%20L7.5%209.5%22%2F%3E%3C%2Fsvg%3E") center / contain no-repeat;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
   }
 
-  &--next:hover svg {
+  &:hover::before {
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2210%22%20viewBox%3D%220%200%2024%2010%22%20fill%3D%22none%22%20stroke%3D%22%23f16527%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M24%205%20H3%20M7.5%200.5%20L3%205%20L7.5%209.5%22%2F%3E%3C%2Fsvg%3E");
+    transform: translateX(-4px);
+  }
+}
+
+// ── Next arrow — ::after pseudo-element ───────────────────────
+.news-pagination-btn--next,
+.news-pagination .pager__item--next a {
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 10px;
+    background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2210%22%20viewBox%3D%220%200%2024%2010%22%20fill%3D%22none%22%20stroke%3D%22%23666666%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M0%205%20H21%20M16.5%200.5%20L21%205%20L16.5%209.5%22%2F%3E%3C%2Fsvg%3E") center / contain no-repeat;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2210%22%20viewBox%3D%220%200%2024%2010%22%20fill%3D%22none%22%20stroke%3D%22%23f16527%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M0%205%20H21%20M16.5%200.5%20L21%205%20L16.5%209.5%22%2F%3E%3C%2Fsvg%3E");
     transform: translateX(4px);
   }
 }
@@ -4018,8 +4116,59 @@ a {
   justify-content: center;
   margin-bottom: 2.5rem;
   flex-wrap: wrap;
+
+  // Drupal menu renders <ul><li><a> — flatten into the flex row
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+
+    a {
+      display: inline-block;
+      font-family: @font-body;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.5rem 1.4rem;
+      border-radius: 4px;
+      cursor: pointer;
+      background: transparent;
+      color: @black;
+      text-decoration: none;
+      transition:
+        background 0.2s ease,
+        color 0.2s ease;
+      letter-spacing: 0.01em;
+
+      &:hover {
+        background: rgba(149, 70, 35, 0.12);
+        color: @brown;
+      }
+
+      // is-active on <a> (Drupal default link function)
+      &.is-active {
+        background: @brown;
+        color: @white;
+      }
+    }
+
+    // is-active on <li> (custom menu--main.html.twig pattern)
+    &.is-active a {
+      background: @brown;
+      color: @white;
+    }
+  }
 }
 
+// Retained for any direct <button class="lib-tab"> usage
 .lib-tab {
   font-family: @font-body;
   font-weight: 600;
@@ -4168,51 +4317,105 @@ a {
 }
 
 .btn-download-report {
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  border-radius: 5px;
-  padding: 0.4rem 0.4rem 0.4rem 0.85rem;
-  font-family: @font-body;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: @black;
-  text-decoration: none;
-  background: #e4e4e4;
-  cursor: pointer;
-  width: max-content;
-  transition:
-    border-color 0.2s ease,
-    background 0.2s ease;
-  margin-top: auto;
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    border-radius: 5px;
+    padding: 0.4rem 0.4rem 0.4rem 0.85rem;
+    font-family: @font-body;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: @black;
+    text-decoration: none;
+    background: #e4e4e4;
+    cursor: pointer;
+    width: max-content;
+    transition:
+      border-color 0.2s ease,
+      background 0.2s ease;
+    margin-top: auto;
 
-  @media (min-width: 1200px) {
-    padding: 0.6rem 0.6rem 0.6rem 0.85rem;
-    font-size: 1rem;
-  }
+    @media (min-width: 1200px) {
+      padding: 0.6rem 0.6rem 0.6rem 0.85rem;
+      font-size: 1rem;
+    }
 
-  &:hover {
-    background: @brown;
-    border-color: #bbb;
-    color: @white;
-    transition: background-color 0.2s ease;
+    &::after {
+      content: '';
+      display: block;
+      width: 30px;
+      min-width: 30px;
+      height: 30px;
+      background: @blue url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%203v12M7%2012l5%205%205-5%22%2F%3E%3Cpath%20d%3D%22M5%2020h14%22%2F%3E%3C%2Fsvg%3E") center / 14px 14px no-repeat;
+      border-radius: 4px;
+      flex-shrink: 0;
+      transition: background-color 0.2s ease;
+    }
 
-    .download-icon {
-      background: @orange;
+    &:hover {
+      background: @brown;
+      border-color: #bbb;
+      color: @white;
+      transition: background-color 0.2s ease;
+
+      &::after {
+        background-color: @orange;
+      }
     }
   }
+}
 
-  .download-icon {
-    width: 30px;
-    height: 30px;
-    background: @blue;
-    border-radius: 4px;
-    display: flex;
+.btn-view-report {
+  a {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    transition: background-color 0.2s ease;
+    justify-content: space-between;
+    gap: 0.75rem;
+    border-radius: 5px;
+    padding: 0.4rem 0.4rem 0.4rem 0.85rem;
+    font-family: @font-body;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: @black;
+    text-decoration: none;
+    background: #e4e4e4;
+    cursor: pointer;
+    width: max-content;
+    transition:
+      border-color 0.2s ease,
+      background 0.2s ease;
+    margin-top: auto;
+
+    @media (min-width: 1200px) {
+      padding: 0.6rem 0.6rem 0.6rem 0.85rem;
+      font-size: 1rem;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 30px;
+      min-width: 30px;
+      height: 30px;
+      background: @green url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M1%2012s4-8%2011-8%2011%208%2011%208-4%208-11%208-11-8-11-8z%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%223%22%2F%3E%3C%2Fsvg%3E") center / 14px 14px no-repeat;
+      border-radius: 4px;
+      flex-shrink: 0;
+      transition: background-color 0.2s ease;
+    }
+
+    &:hover {
+      background: @blue;
+      border-color: #bbb;
+      color: @white;
+      transition: background-color 0.2s ease;
+
+      &::after {
+        background-color: @white;
+        background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%2319a41c%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M1%2012s4-8%2011-8%2011%208%2011%208-4%208-11%208-11-8-11-8z%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%223%22%2F%3E%3C%2Fsvg%3E");
+      }
+    }
   }
 }
 
@@ -4411,6 +4614,253 @@ a {
     border-radius: 6px;
     margin-bottom: 1em;
     object-fit: cover;
+  }
+
+  h3{
+    font-family: @font-heading;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: @orange;
+    margin: 2rem 0 0.75rem;
+
+    @media (min-width: 768px) {
+        font-size: 1.25rem;
+      }
+  }
+
+  h4{
+    font-family: @font-heading;
+    font-size: 1rem;
+    font-weight: 700;
+    color: @orange;
+    margin: 2rem 0 0.75rem;
+
+    @media (min-width: 768px) {
+        font-size: 1.125rem;
+      }
+  }
+
+  // ── Lists ──────────────────────────────────────────────────
+
+  ul,
+  ol {
+    margin: 0 0 1.25rem;
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      margin-bottom: 0.45rem;
+      line-height: 1.7;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      // Tighten paragraph spacing when a <p> sits inside a list item
+      p {
+        margin-bottom: 0.3rem;
+      }
+    }
+
+    // Any list directly nested inside a list item
+    ul,
+    ol {
+      margin: 0.4rem 0 0.2rem;
+      padding-left: 1rem;
+    }
+  }
+
+  // ── Unordered list — orange dot ──────────────────────────
+  ul {
+    li {
+      padding-left: 1.35rem;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.62em;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: @orange;
+        flex-shrink: 0;
+      }
+    }
+
+    // Level 2 — brown filled square
+    ul li {
+      padding-left: 1.25rem;
+
+      &::before {
+        width: 5px;
+        height: 5px;
+        background: @brown;
+        border-radius: 2px;
+        top: 0.65em;
+      }
+    }
+
+    // Level 3 — hollow blue circle
+    ul ul li::before {
+      background: transparent;
+      border: 1.5px solid @blue;
+      border-radius: 50%;
+      width: 5px;
+      height: 5px;
+      top: 0.65em;
+    }
+  }
+
+  // ── Ordered list — orange counter ────────────────────────
+  ol {
+    counter-reset: article-ol;
+
+    li {
+      padding-left: 1.75rem;
+      counter-increment: article-ol;
+
+      &::before {
+        content: counter(article-ol) ".";
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-family: @font-heading;
+        font-weight: 700;
+        font-size: 0.9em;
+        color: @orange;
+        min-width: 1.5rem;
+        line-height: 1.75;
+      }
+    }
+
+    // Level 2 — brown alpha (a. b. c.)
+    ol {
+      counter-reset: article-ol-sub;
+
+      li {
+        padding-left: 1.5rem;
+        counter-increment: article-ol-sub;
+
+        &::before {
+          content: counter(article-ol-sub, lower-alpha) ".";
+          color: @brown;
+          font-weight: 600;
+          font-size: 0.875em;
+          min-width: 1.25rem;
+        }
+      }
+
+      // Level 3 — blue roman (i. ii. iii.)
+      ol {
+        counter-reset: article-ol-sub2;
+
+        li {
+          counter-increment: article-ol-sub2;
+
+          &::before {
+            content: counter(article-ol-sub2, lower-roman) ".";
+            color: @blue;
+            font-weight: 600;
+            font-size: 0.85em;
+          }
+        }
+      }
+    }
+  }
+
+  // ── Table ──────────────────────────────────────────────────
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: @font-body;
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: @text-color;
+    background: @white;
+    margin: 1.75rem 0 2rem;
+    border-top: 3px solid @orange;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+
+    // Responsive: scrolls horizontally on narrow viewports
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    @media (min-width: 900px) {
+      display: table;
+    }
+
+    // ── Header row ─────────────────────────────────────────
+    // No <thead> in the markup — first <tr> carries <strong> labels
+    tbody tr:first-child {
+      td {
+        background: @orange;
+        color: @white;
+        font-family: @font-heading;
+        font-size: 0.775rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        padding: 0.8rem 1rem;
+        border: none;
+        white-space: nowrap;
+
+        strong {
+          color: @white !important;
+          font-size: inherit !important;
+          font-weight: 700;
+        }
+
+        // Clause header cell
+        &:first-child {
+          text-align: center;
+          width: 90px;
+          border-right: 1px solid rgba(255, 255, 255, 0.25);
+        }
+      }
+    }
+
+    // ── Data rows ──────────────────────────────────────────
+    tbody tr:not(:first-child) {
+      border-bottom: 1px solid @gray-mid;
+      transition: background 0.15s ease;
+
+      &:nth-child(even) {
+        background: @gray-dim;
+      }
+
+      &:hover {
+        background: rgba(241, 101, 39, 0.04);
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      td {
+        padding: 0.875rem 1rem;
+        vertical-align: top;
+      }
+
+      // ── Clause column ────────────────────────────────────
+      // Narrow, centred, brown — acts as a visual row anchor
+      td:first-child {
+        width: 90px;
+        min-width: 80px;
+        text-align: center;
+        font-weight: 700;
+        font-family: @font-heading;
+        color: @brown;
+        font-size: 0.9375rem;
+        white-space: nowrap;
+        vertical-align: middle;
+        border-right: 1px solid @gray-mid;
+        border-left: 3px solid @orange;
+        background: rgba(149, 70, 35, 0.035);
+      }
+    }
   }
 }
 
